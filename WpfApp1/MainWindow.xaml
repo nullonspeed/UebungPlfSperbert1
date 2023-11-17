@@ -1,0 +1,237 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Closing="WindowClosing" >
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Height="20">
+            <MenuItem Header="File">
+                <MenuItem Header="File Open" Click="OpenFileEvent" ></MenuItem>
+                <MenuItem Header="Save File" Click="SaveFileEvent" ></MenuItem>
+                <MenuItem Header="Close" Click="CloseWindow" ></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBar DockPanel.Dock="Top" Height="30">
+            
+            <Button Click="OpenFileEvent">
+                <Button.Content>
+                    <Image Source="/open-file.png" />
+                </Button.Content>
+            </Button>
+ 
+            <Button Click="SaveFileEvent">
+                <Button.Content>
+                    <Image Source="/filesave.png"/>
+
+
+                </Button.Content>
+            </Button>
+            
+            <Button Click="CloseWindow">
+                <Button.Content>
+                    <Image Source="/exit.png"/>
+                </Button.Content>
+            </Button>
+        </ToolBar>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*">
+                </ColumnDefinition>
+                <ColumnDefinition Width="*">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Border BorderBrush="Black" BorderThickness="2" Margin="5">
+                <DockPanel Grid.Column="0" Grid.Row="0" >
+                    <Grid DockPanel.Dock="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox  Margin="5"></ComboBox>
+                        <Label Grid.Column="1" Content="Zeit:0-3h"></Label>
+                    </Grid>
+                    
+                    <Grid DockPanel.Dock="Bottom">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        
+                        <Label Grid.Column="0" Grid.Row="1" Content="0 bar"></Label>
+                        <Label Grid.Column="1" Grid.Row="1" Content="2 bar"></Label>
+                        <Label Grid.Column="2" Grid.Row="1" Content="9 bar"></Label>
+                        <Label HorizontalContentAlignment="Right" Grid.Column="3" Grid.Row="1" Content="1.88h"></Label>
+                        <Slider Grid.ColumnSpan="3" ></Slider>
+                    </Grid>
+                   
+                    <ProgressBar DockPanel.Dock="Right" Value="80" Orientation="Vertical" MinWidth="80">
+                        
+                    </ProgressBar>
+                    <Canvas Background="Black">
+                        
+                    </Canvas>
+                    
+
+                    
+                </DockPanel>
+            </Border>
+            
+            
+            
+            
+            
+            
+            
+            
+            <Border BorderBrush="Black" BorderThickness="2" Margin="5" Grid.Column="1" Grid.Row="0">
+                <DockPanel Grid.Column="1" Grid.Row="0">
+
+
+                    <Grid DockPanel.Dock="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox  Margin="5"></ComboBox>
+                        <Label Grid.Column="1" Content="Zeit:0-3h"></Label>
+                    </Grid>
+
+                    <Grid DockPanel.Dock="Bottom">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="1" Content="0 bar"></Label>
+                        <Label Grid.Column="1" Grid.Row="1" Content="2 bar"></Label>
+                        <Label Grid.Column="2" Grid.Row="1" Content="9 bar"></Label>
+                        <Label HorizontalContentAlignment="Right" Grid.Column="3" Grid.Row="1" Content="1.88h"></Label>
+                        <Slider Grid.ColumnSpan="3" ></Slider>
+                    </Grid>
+
+                    <ProgressBar DockPanel.Dock="Right" Value="80" Orientation="Vertical" MinWidth="80">
+
+                    </ProgressBar>
+                    <Canvas Background="Black">
+
+                    </Canvas>
+
+
+
+                </DockPanel>
+            </Border>
+
+            
+            <Border BorderBrush="Black" BorderThickness="2" Margin="5" Grid.Column="0" Grid.Row="1">
+                <DockPanel Grid.Column="0" Grid.Row="1">
+
+
+                    <Grid DockPanel.Dock="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox  Margin="5"></ComboBox>
+                        <Label Grid.Column="1" Content="Zeit:0-3h"></Label>
+                    </Grid>
+
+                    <Grid DockPanel.Dock="Bottom">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="1" Content="0 bar"></Label>
+                        <Label Grid.Column="1" Grid.Row="1" Content="2 bar"></Label>
+                        <Label Grid.Column="2" Grid.Row="1" Content="9 bar"></Label>
+                        <Label HorizontalContentAlignment="Right" Grid.Column="3" Grid.Row="1" Content="1.88h"></Label>
+                        <Slider Grid.ColumnSpan="3" ></Slider>
+                    </Grid>
+
+                    <ProgressBar DockPanel.Dock="Right" Value="80" Orientation="Vertical" MinWidth="80">
+
+                    </ProgressBar>
+                    <Canvas Background="Black">
+
+                    </Canvas>
+
+
+
+                </DockPanel>
+            </Border>
+            
+            
+            
+            <Border BorderBrush="Black" BorderThickness="2" Margin="5" Grid.Column="1" Grid.Row="1">
+                <DockPanel Grid.Column="1" Grid.Row="1">
+
+
+                    <Grid DockPanel.Dock="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox  Margin="5"></ComboBox>
+                        <Label Grid.Column="1" Content="Zeit:0-3h"></Label>
+                    </Grid>
+
+                    <Grid DockPanel.Dock="Bottom">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Column="0" Grid.Row="1" Content="0 bar"></Label>
+                        <Label Grid.Column="1" Grid.Row="1" Content="2 bar"></Label>
+                        <Label Grid.Column="2" Grid.Row="1" Content="9 bar"></Label>
+                        <Label HorizontalContentAlignment="Right" Grid.Column="3" Grid.Row="1" Content="1.88h"></Label>
+                        <Slider Grid.ColumnSpan="3" ></Slider>
+                    </Grid>
+
+                    <ProgressBar DockPanel.Dock="Right" Value="80" Orientation="Vertical" MinWidth="80">
+
+                    </ProgressBar>
+                    <Canvas Background="Black">
+
+                    </Canvas>
+
+
+
+                </DockPanel>
+            </Border>
+        </Grid>
+
+    </DockPanel>
+</Window>
